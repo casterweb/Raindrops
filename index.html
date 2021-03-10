@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raindrops</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chango&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="greeting">
+      <h1>Raindrops</h1>
+      <p>
+        You must enter a value before the drop falls into the sea. When the third drop touches the sea, the game is over.
+      </p>
+      <div class="buttons">
+        <button class="how-to-play">How to Play</button>
+        <button class="play">Play</button>
+      </div>
+    </div>
+    <div class="game">
+      <audio class="rain" autoplay="autoplay" loop src="sound/sea.mp3"></audio>
+      <audio class="right-sound" src="sound/right-answer.mp3"></audio>
+      <audio class="fail-sound" src="sound/fail.mp3"></audio>
+      <div class="game-place">
+        <div class="wave">
+          <img class="wave-img" src="img/wave2.png" width="100%" >
+        </div>
+      </div>
+      <div class="result-entry">
+        <div class="score">Score: 0</div>
+        <div class="calc">
+          <div class="user-result">
+            <input class="display" value="">
+          </div>
+          <div class="keyboard">
+            <div class="tag"><button class="key number">7</button></div>
+            <div class="tag"><button class="key number">8</button></div>
+            <div class="tag"><button class="key number">9</button></div>
+            <div class="tag" id="clear">
+              <button class="key clear">Clear</button>
+            </div>
+            <div class="tag"><button class="key number">4</button></div>
+            <div class="tag"><button class="key number">5</button></div>
+            <div class="tag"><button class="key number">6</button></div>
+            <div class="tag"><button class="key number">1</button></div>
+            <div class="tag"><button class="key number">2</button></div>
+            <div class="tag"><button class="key number">3</button></div>
+            <div class="tag" id="enter">
+              <button class="key enter">Enter</button>
+            </div>
+            <div class="tag" id="zero">
+              <button class="key number">0</button>
+            </div>
+            <div class="tag" id="delete-key">
+              <button class="key delete-key">Delete</button>
+            </div>
+          </div>
+        </div>
+        <button id="full" data-fullscreen></button>
+      </div>
+    </div>
+    <div class="score-board">
+      <h2>Raindrops</h2>
+      <div class="leaderboard">
+        <div class="column-1">
+          <div class="your-score"> Score:</div>
+          <div class="right-answers">Right answers:</div>
+          <div class="wrong-answers">Wrong answers:</div>
+        </div>
+        <div class="column-2">
+          <div class="result-score"></div>
+          <div class="result-right-answers"></div>
+          <div class="result-wrong-answers"></div>
+        </div>
+      </div>
+      <button class="continue">Continue</button>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

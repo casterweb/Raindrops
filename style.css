@@ -1,0 +1,452 @@
+html {
+  margin: 5px;
+
+  background: linear-gradient(rgb(250, 250, 253) 50%, rgb(132, 210, 230));
+}
+body {
+  width: auto;
+  max-width: 900px;
+  height: 100vh;
+  margin: auto;
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.greeting {
+  margin: 0;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 95vh;
+  background: url(img/drop-water.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+h1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 70px;
+  align-items: center;
+  font-size: 80px;
+  font-family: "Chango", cursive;
+  color: rgb(67, 139, 247);
+  text-shadow: 3px 4px 5px rgb(7, 18, 119);
+}
+
+p {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: "Courgette", cursive;
+  font-size: 20px;
+  margin-top: 150px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 150px;
+}
+
+.how-to-play {
+  padding: 10px 40px;
+  margin: 10px;
+  color: rgb(255, 255, 255);
+  background: rgba(106, 131, 243, 1);
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.play {
+  padding: 10px 40px;
+  margin: 10px;
+  color: rgb(255, 255, 255);
+  background: rgba(63, 211, 95, 1);
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.game {
+  display: none;
+  flex-direction: row;
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2), 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.game-place {
+  width: 67%;
+  height: 100vh;
+  background: url(img/beach_PNG57.png) no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.drop {
+  width: 70px;
+  height: 70px;
+  background: rgb(152, 219, 216);
+  border-radius: 50%;
+  border: solid 3px #7ebce6;
+  font-size: 30px;
+  position: absolute;
+}
+
+.operator {
+  position: absolute;
+  top: 0px;
+  left: 5px;
+  font-size: 55px;
+}
+
+.num1 {
+  position: absolute;
+  top: 0px;
+  right: 18px;
+}
+
+.num2 {
+  position: absolute;
+  bottom: 0px;
+  right: 18px;
+}
+
+.wave {
+  position: absolute;
+  height: 100px;
+  bottom: 0;
+}
+
+.wave-img {
+  animation: wave 3s infinite linear;
+}
+
+@keyframes wave {
+  0% {
+    height: 100%;
+  }
+  50% {
+    height: 120%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+.result-entry {
+  width: 33%;
+  height: 100vh;
+  background: rgb(152, 219, 216);
+}
+
+.score {
+  height: 45px;
+  background: rgb(228, 227, 227);
+  font-size: 25px;
+  text-align: center;
+  border: solid 5px white;
+  border-bottom-left-radius: 45px;
+  border-bottom-right-radius: 45px;
+  margin: 0 10px;
+}
+
+.calc {
+  height: 400px;
+  margin: 50px 10px 50px 10px;
+  border: solid 6px rgb(247, 225, 186);
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2), 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.user-result {
+  height: 20%;
+}
+.display {
+  width: 100%;
+  height: 100%;
+  background: rgb(228, 227, 227);
+  text-align: center;
+  font-size: 40px;
+  border: solid 0.5px rgb(192, 191, 191);
+  box-sizing: border-box;
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  height: 80%;
+}
+
+.key {
+  width: 100%;
+  height: 100%;
+  font-size: 25px;
+  background: ivory;
+  cursor: pointer;
+  border-radius: 0px;
+  border: solid 0.5px rgb(192, 191, 191);
+}
+
+.delete-key,
+.clear,
+.enter {
+  font-size: 19px;
+}
+.key:active {
+  background-color: rgba(245, 197, 135, 1);
+}
+
+#clear {
+  display: grid;
+  grid-row-start: 1;
+  grid-column-start: 4;
+  grid-row-end: 3;
+  grid-column-end: 5;
+}
+
+#enter {
+  display: grid;
+  grid-row-start: 3;
+  grid-column-start: 4;
+  grid-row-end: 5;
+  grid-column-end: 5;
+}
+
+#zero {
+  display: grid;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#full {
+  width: 30%;
+  height: 10%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  background-image: url("https://icon-library.com/images/full-screen-icon-png/full-screen-icon-png-3.jpg");
+  background-size: 100% 100%;
+  filter: invert(100%);
+  opacity: 0.5;
+  margin: auto;
+  justify-content: center;
+  display: flex;
+}
+
+.score-board {
+  display: none;
+  justify-content: center;
+  align-content: space-between;
+}
+
+.continue {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 10px 40px;
+  margin: auto;
+  margin-top: 60px;
+  color: rgb(255, 255, 255);
+  background: rgba(63, 211, 95, 1);
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 100px;
+  font-family: "Chango", cursive;
+  color: rgb(67, 139, 247);
+  text-shadow: 3px 4px 5px rgb(7, 18, 119);
+}
+
+.leaderboard {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  font-size: 40px;
+  font-family: "Yusei Magic", sans-serif;
+  color: #1a6597;
+}
+
+.colum-2 {
+  width: 80px;
+  text-align: right;
+}
+
+@media (max-width: 732px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  p {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+  .how-to-play {
+    padding: 10px 10px;
+    color: rgb(255, 255, 255);
+    background: rgba(106, 131, 243, 1);
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2),
+      inset -5px -5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .play {
+    padding: 10px 40px;
+    color: rgb(255, 255, 255);
+    background: rgba(63, 211, 95, 1);
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2),
+      inset -5px -5px 10px rgba(0, 0, 0, 0.2);
+  }
+  h2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 40px;
+    font-family: "Chango", cursive;
+    color: rgb(67, 139, 247);
+    text-shadow: 3px 4px 5px rgb(7, 18, 119);
+  }
+
+  .leaderboard {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 100px 0 100px 0;
+    font-size: 30px;
+    font-family: "Yusei Magic", sans-serif;
+    color: #1a6597;
+  }
+
+  .game {
+    display: flex;
+    flex-direction: row;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2),
+      5px 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .drop {
+    width: 45px;
+    height: 45px;
+    border: solid 2px #7ebce6;
+    font-size: 23px;
+  }
+
+  .operator {
+    left: 5px;
+    font-size: 30px;
+  }
+
+  .num1 {
+    top: 0px;
+    right: 9px;
+  }
+
+  .num2 {
+    right: 9px;
+  }
+
+  .result-entry {
+    width: 45%;
+    height: 100vh;
+    background: rgb(152, 219, 216);
+  }
+
+  .score {
+    height: 30px;
+    font-size: 18px;
+    border: solid 3px white;
+  }
+
+  .calc {
+    height: 250px;
+    margin: 50px 5px 50px 5px;
+    border: solid 2px rgb(247, 225, 186);
+  }
+
+  .display {
+    font-size: 30px;
+  }
+
+  .key {
+    width: 100%;
+    height: 100%;
+    font-size: 10px;
+    background: ivory;
+    cursor: pointer;
+    border-radius: 0px;
+    border: solid 0.5px rgb(192, 191, 191);
+  }
+
+  .delete-key,
+  .clear,
+  .enter {
+    font-size: 10px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .key:active {
+    background-color: rgba(245, 197, 135, 1);
+  }
+
+  #clear {
+    display: grid;
+    grid-row-start: 1;
+    grid-column-start: 4;
+    grid-row-end: 3;
+    grid-column-end: 5;
+  }
+
+  #enter {
+    display: grid;
+    grid-row-start: 3;
+    grid-column-start: 4;
+    grid-row-end: 5;
+    grid-column-end: 5;
+  }
+
+  #zero {
+    display: grid;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
